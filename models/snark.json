@@ -1,0 +1,12 @@
+[
+  { "snark":"Curly braces are an essential part of javascript. Webstorm will even point them out for you!",
+  "id": 1},
+  { "snark":"Did you forget to console log?",
+  "id": 2},
+  { "snark": "Maybe you're the problem.",
+  "id": 3},
+  { "snark": "Look where it got us",
+  "id": 4},
+  { "snark": "More likely user error",
+  "id": 5}
+]

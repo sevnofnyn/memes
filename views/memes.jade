@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 MEMES!!! YAY :D
+    each meme, index in memes
+        .meme-container
+            h2.titles= meme.title
+            img(src=meme.src)
+            p.comment= comments[index].snark
+            .border
