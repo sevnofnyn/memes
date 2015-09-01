@@ -3,7 +3,8 @@ extends layout
 block content
     .container
         h1 Monday to Friday Snark
-        each meme in memes
+        //- memesObject is passed into the rendering function on the memes.js route ('/' get)
+        each meme in memesObject
             .meme-container
                 h2.titles= meme.title
                 img(src=meme.src)
