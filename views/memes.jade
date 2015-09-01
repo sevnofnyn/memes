@@ -1,20 +1,19 @@
 extends layout
 
 block content
-    h1 Monday to Friday Snark
-    each meme in memes
-        .meme-container
-            h2.titles= meme.title
-            img(src=meme.src)
-            .snark
-            .border
+    .container
+        h1 Monday to Friday Snark
+        each meme in memes
+            .meme-container
+                h2.titles= meme.title
+                img(src=meme.src)
 
-    form(name="add-snark", method="post")
-            div.input-text
-                span.label Add (nice) Snarky Comment
-                input(type="text", name="snark")
-            div.input-id
-                span.label Select picture number you want to snark!
-                input(type="number", min="1", max="5", name="id")
-            div.actions
-                button#sendSnark Send Snark!
+        form#submit(name="add-snark", method="post")
+                div.input-text
+                    span.label Add (nice) Snarky Comment
+                    input(type="text", name="snark")
+                div.input-id
+                    span.label Select picture number you want to snark!
+                    input(type="number", min="1", max="5", name="id")
+                div.actions
+                    button#sendSnark Send Snark!

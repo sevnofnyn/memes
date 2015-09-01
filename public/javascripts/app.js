@@ -7,11 +7,9 @@ $(document).ready(function(){
         console.log(data);
         obj = JSON.parse(data); //turn json obj into js array
         obj.forEach(function(elem, index){  //iterate through obj(snark array)
-            if(elem.id == $('.meme-container').get(elem.id-1))//if the snark id is equal to the index of an image, then we append to the DOM correct position
-            console.log(elem.snark, $('.meme-container').get(elem.id-1));
+            var $p = $('<p class"snarky">'+elem.snark+'</p>');
+            $('.meme-container').eq(elem.id-1).append($p);
         })
-    })
-
-
+    });
 
 });

@@ -15,7 +15,14 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/snark', function(req, res, next){
-  res.send(snark);
+  var file1 = path.join(__dirname, '../models/snark.json');
+  fs.readFile(file1, 'utf8', function(err, data){
+    if (err){
+      next(err);
+    } else {
+      res.send(data);
+    }
+  });
 });
 
 router.post('/', function(req, res, next) {
@@ -32,7 +39,7 @@ router.post('/', function(req, res, next) {
       fs.writeFile(file, JSON.stringify(obj), 'utf-8', function (err) {
         if (err) return console.log(err);
         console.log('Wrote Snark');
-
+        res.redirect('/memes');
       })
     }
   });
